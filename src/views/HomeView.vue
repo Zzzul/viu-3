@@ -1,7 +1,7 @@
 <script setup>
-import Food from '../components/Food.vue'
+import Product from '../components/Product.vue'
 import Customer from '../components/Customer.vue'
-import ProductCart from '../components/ProductCart.vue'
+import Cart from '../components/Cart.vue'
 import Summary from '../components/Summary.vue'
 import Action from '../components/Action.vue'
 </script>
@@ -9,12 +9,12 @@ import Action from '../components/Action.vue'
 <template>
   <main class="container-fluid">
     <div class="row">
-      <Food />
+      <Product />
 
       <div class="col-md-4 bg-body-tertiary" style="min-height: 100vh;">
         <Customer />
 
-        <ProductCart/>
+        <Cart/>
 
         <Summary/>
 

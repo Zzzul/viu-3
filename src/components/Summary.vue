@@ -1,7 +1,14 @@
 <script setup>
-import { useCartStore } from '../stores/cart';
+import { useCartStore } from '../stores/cart'
+import { component as VueNumber } from '@coders-tm/vue-number-format'
 
-const cart = useCartStore();
+const cart = useCartStore()
+const currencyFormat = {
+    decimal: ',',
+    separator: '.',
+    prefix: 'Rp. ',
+    precision: 0,
+}
 </script>
 
 <template>
@@ -19,11 +26,7 @@ const cart = useCartStore();
                 <tr>
                     <th>Discount</th>
                     <td>
-                        <div class="input-group">
-                            <span class="input-group-text" id="dicsount">Rp.</span>
-                            <input type="number" class="form-control" placeholder="Discount" aria-label="Discount"
-                                aria-describedby="dicsount" v-model="cart.discount">
-                        </div>
+                        <vue-number v-bind="currencyFormat" v-model="cart.discount" class="form-control"></vue-number>
                     </td>
                 </tr>
                 <tr>
@@ -36,15 +39,11 @@ const cart = useCartStore();
                     <th>Paid</th>
                     <td>
                         <div class="row g-0">
-                            <div class="col-md-9">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="paid">Rp.</span>
-                                    <input type="number" class="form-control" placeholder="Paid" aria-label="Paid"
-                                        aria-describedby="paid" v-model="cart.paid">
-                                </div>
+                            <div class="col-md-10">
+                                <vue-number v-bind="currencyFormat" v-model="cart.paid" class="form-control"></vue-number>
                             </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-sm btn-primary ms-2 mt-1" @click="cart.autoPayment">Auto</button>
+                            <div class="col-md-2">
+                                <button class="btn btn-sm btn-primary ms-2 mt-1 p-1" @click="cart.autoPayment">Auto</button>
                             </div>
                         </div>
                     </td>
@@ -52,7 +51,9 @@ const cart = useCartStore();
                 <tr>
                     <th>Change</th>
                     <td>
-                        <h6><h5>{{ cart.formatCurrency(cart.countChange) }}</h5></h6>
+                        <h6>
+                            <h5>{{ cart.formatCurrency(cart.countChange) }}</h5>
+                        </h6>
                     </td>
                 </tr>
             </table>

@@ -103,6 +103,20 @@ export const useCartStore = defineStore('cart', () => {
         paid.value = countGrandTotal.value
     }
 
+    const save = () => {
+        console.log(
+            carts.value,
+            discount.value,
+            paid.value,
+            customer.value,
+            countGrandTotal.value,
+            countChange.value,
+            countSubTotal.value
+        )
+        clearCart()
+        alert('Order has been saved')
+    }
+
     return {
         carts,
         addToCart,
@@ -118,6 +132,7 @@ export const useCartStore = defineStore('cart', () => {
         countChange,
         autoPayment,
         isCanSave,
-        customer
+        customer,
+        save
     }
 })
