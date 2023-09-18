@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "category_id": 1,
+        "name": "Nasi Goreng",
+        "price": 20000,
+        "stock": 10,
+        "expired_date": "2022-01-01",
+        "description": "Nasi goreng"
+    },
+    {
+        "id": 2,
+        "category_id": 1,
+        "name": "Sate",
+        "price": 30000,
+        "stock": 10,
+        "description": "Sate"
+    },
+    {
+        "id": 3,
+        "category_id": 2,
+        "name": "Bakso",
+        "price": 20000,
+        "stock": 10,
+        "description": "Bakso"
+    },
+    {
+        "id": 4,
+        "category_id": 2,
+        "name": "Es Teh",
+        "price": 10000,
+        "stock": 99,
+        "description": "Es Teh"
+    }
+]
