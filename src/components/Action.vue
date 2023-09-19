@@ -113,7 +113,7 @@ const closeModalHoldCart = () => Modal.getInstance(getHoldCartModalRef.value)?.h
                                     <template v-if="cart.holdCarts.length > 0">
                                         <tr v-for="(hold, i) in cart.holdCarts" :key="i">
                                             <td>{{ i + 1 }}</td>
-                                            <td>{{ hold.customer }}</td>
+                                            <td>{{ hold?.customer == '' ? '-' : hold.customer }}</td>
                                             <td>{{ hold.carts.length }}</td>
                                             <td>{{ cart.formatCurrency(parseInt(hold.carts.reduce((acc, item) => acc +
                                                 (item.discount ?

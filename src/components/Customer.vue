@@ -1,10 +1,11 @@
 <script setup>
-import customerJson from '../assets/data/customers.json'
 import { useCartStore } from '../stores/cart'
 import { ref } from 'vue'
+import { useCustomerStore } from '../stores/customer'
 
-const customers = ref(customerJson)
+const customerStore = useCustomerStore()
 const cart = useCartStore()
+const customers = ref(customerStore.customers)
 const customerName = ref('')
 const addCustomer = () => {
     if(!customerName.value){
@@ -12,13 +13,14 @@ const addCustomer = () => {
     }
 
     const length = customers.value.length
-    customers.value.push({
+
+    customerStore.addCustomer({
         id: length,
         name: customerName.value
     })
 
-    customerName.value = ''
     cart.customer = customers.value[length].name
+    customerName.value = ''
 }
 </script>
 
