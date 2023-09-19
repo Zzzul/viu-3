@@ -1,18 +1,22 @@
 [
     {   
         "id": 1,
-        "name": "Food"
+        "name": "Food",
+        "image": "https://placehold.co/400x300?text=Food"
     },
     {
         "id": 2,
-        "name": "Drink"
+        "name": "Drink",
+        "image": "https://placehold.co/400x300?text=Drink"
     },
     {
         "id": 3,
-        "name": "Snack"
+        "name": "Snack",
+        "image": "https://placehold.co/400x300?text=Snack"
     },
     {
         "id": 4,
-        "name": "Other"
+        "name": "Other",
+        "image": "https://placehold.co/400x300?text=Other"
     }
 ]

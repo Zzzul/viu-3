@@ -22,11 +22,11 @@ const currencyFormat = {
             <div class="alert alert-light p-2" role="alert" v-for="(c, i) in cart.carts" :key="c.id">
                 <div class="row">
                     <div class="col-md-8">
-                        <p class="mb-1">{{ c.name }}
+                        <p class="mb-0">{{ c.name }}
                             <button class="btn btn-sm btn-transparent p-0 mb-1 text-danger" @click="cart.removeItem(c.id)">x</button>
                         </p>
 
-                        <p class="mb-0">
+                        <p class="mb-0 mt-0">
                             <s v-if="c.discount">{{ cart.formatCurrency(c.price) }}</s>
                             <span v-else>{{ cart.formatCurrency(c.price) }}</span>
                             <span v-if="c.discount" class="ms-2">{{ cart.formatCurrency(c.discount) }}</span>

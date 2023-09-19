@@ -1,213 +1,1002 @@
 [
     {
         "id": 1,
-        "category_id": 1,
-        "name": "Nasi Goreng",
-        "price": 20000,
-        "stock": 10,
-        "expired_date": "2022-01-01",
-        "description": "Nasi goreng"
+        "name": "Daging Bebek Tomat",
+        "price": 52241,
+        "stock": 1,
+        "category_id": 2,
+        "expire_date": "1999-04-15",
+        "image": "https://placehold.co/400x300?text=Daging+Bebek+Tomat",
+        "description": "Labore ducimus ipsa distinctio repellendus. Enim neque sit ut est inventore voluptatem maiores. Ipsa in consequuntur debitis quisquam."
     },
     {
         "id": 2,
-        "category_id": 1,
-        "name": "Sate",
-        "price": 30000,
-        "stock": 10,
-        "description": "Sate"
+        "name": "Ayam Tangkap Jambu Biji",
+        "price": 49330,
+        "stock": 5,
+        "category_id": 4,
+        "expire_date": "2015-11-04",
+        "image": "https://placehold.co/400x300?text=Ayam+Tangkap+Jambu+Biji",
+        "description": "Molestiae debitis nulla magnam nisi. Aut dolorum labore neque impedit voluptatibus ad nisi et. Autem magni a omnis voluptas labore earum. Aut consequatur hic eaque ab molestias enim."
     },
     {
         "id": 3,
+        "name": "Daging Babi Asap Jagung",
+        "price": 32819,
+        "stock": 74,
         "category_id": 2,
-        "name": "Bakso",
-        "price": 20000,
-        "stock": 10,
-        "description": "Bakso"
+        "expire_date": "2022-11-29",
+        "image": "https://placehold.co/400x300?text=Daging+Babi+Asap+Jagung",
+        "description": "Ut odit error laborum facere itaque vitae nemo. Tenetur quaerat est voluptatem blanditiis sit. Et quia voluptas aut perferendis enim id optio saepe."
     },
     {
         "id": 4,
-        "category_id": 2,
-        "name": "Es Teh",
-        "price": 10000,
-        "stock": 99,
-        "description": "Es Teh"
+        "name": "Urap Sawo",
+        "price": 73067,
+        "stock": 13,
+        "category_id": 1,
+        "expire_date": "2005-11-02",
+        "image": "https://placehold.co/400x300?text=Urap+Sawo",
+        "description": "Rerum sit quos voluptatum voluptatem nobis quas earum ut. Et quis quia qui perferendis. Incidunt pariatur dignissimos itaque vitae earum in porro quasi. Et quis omnis impedit nam."
     },
     {
         "id": 5,
-        "category_id": 1,
-        "name": "Mie Goreng",
-        "price": 15000,
-        "stock": 15,
-        "expired_date": "2022-03-01",
-        "description": "Mie goreng"
+        "name": "Daging Bebek Acar",
+        "price": 91480,
+        "stock": 44,
+        "category_id": 4,
+        "expire_date": "2007-05-15",
+        "image": "https://placehold.co/400x300?text=Daging+Bebek+Acar",
+        "description": "Voluptates sed incidunt voluptatem debitis quia itaque tempora. Cum minima quis laborum quas soluta. Iusto ex dolores modi nemo ab nemo et."
     },
     {
         "id": 6,
-        "category_id": 3,
-        "name": "Ayam Goreng",
-        "price": 25000,
-        "stock": 8,
-        "description": "Ayam goreng"
+        "name": "Ayam Bakar Durian",
+        "price": 48390,
+        "stock": 55,
+        "category_id": 2,
+        "expire_date": "1992-04-04",
+        "image": "https://placehold.co/400x300?text=Ayam+Bakar+Durian",
+        "description": "Molestiae qui veritatis architecto maiores dolorum asperiores. Odio illum non sit perspiciatis delectus ex. Est et illo veritatis deleniti illo. Ex perferendis alias delectus eveniet a vero."
     },
     {
         "id": 7,
-        "category_id": 3,
-        "name": "Nasi Kuning",
-        "price": 18000,
-        "stock": 20,
-        "expired_date": "2022-02-15",
-        "description": "Nasi kuning"
+        "name": "Daging Kambing Bawang Putih",
+        "price": 71839,
+        "stock": 13,
+        "category_id": 2,
+        "expire_date": "1999-06-02",
+        "image": "https://placehold.co/400x300?text=Daging+Kambing+Bawang+Putih",
+        "description": "Expedita iusto vel id qui quae hic consequatur. Quaerat ipsa non doloremque alias. Optio assumenda eum dolores facere qui adipisci. Eos placeat eveniet nesciunt."
     },
     {
         "id": 8,
-        "category_id": 4,
-        "name": "Soto Ayam",
-        "price": 22000,
-        "stock": 12,
-        "description": "Soto ayam"
+        "name": "Nasi Uduk Cranberry",
+        "price": 47324,
+        "stock": 70,
+        "category_id": 1,
+        "expire_date": "2016-12-09",
+        "image": "https://placehold.co/400x300?text=Nasi+Uduk+Cranberry",
+        "description": "Dolores distinctio ipsum nemo ut aspernatur libero amet. Cumque aperiam itaque voluptatem commodi nam quisquam. Cumque necessitatibus quaerat fuga doloribus non."
     },
     {
         "id": 9,
+        "name": "Sayap Ayam Jagung",
+        "price": 24769,
+        "stock": 21,
         "category_id": 4,
-        "name": "Kerak Telor",
-        "price": 17000,
-        "stock": 5,
-        "expired_date": "2022-02-28",
-        "description": "Kerak telor"
+        "expire_date": "1990-03-23",
+        "image": "https://placehold.co/400x300?text=Sayap+Ayam+Jagung",
+        "description": "Consequuntur animi modi vitae quas voluptatem occaecati. Ad laboriosam amet eveniet nisi in distinctio. Est nobis id minus vitae aut."
     },
     {
         "id": 10,
-        "category_id": 1,
-        "name": "Nasi Uduk",
-        "price": 19000,
+        "name": "Tahu Bulat Sawo",
+        "price": 77596,
         "stock": 18,
-        "description": "Nasi uduk"
+        "category_id": 3,
+        "expire_date": "2022-10-24",
+        "image": "https://placehold.co/400x300?text=Tahu+Bulat+Sawo",
+        "description": "Totam id ea ut ut illo aut eum. Expedita incidunt quis labore odio dolores odio aut. Doloribus aut iste et ea dolorem."
     },
     {
         "id": 11,
+        "name": "Dada Ayam Bawang Bombay",
+        "price": 51189,
+        "stock": 89,
         "category_id": 2,
-        "name": "Mie Ayam",
-        "price": 18000,
-        "stock": 22,
-        "expired_date": "2022-03-10",
-        "description": "Mie ayam"
+        "expire_date": "2013-01-09",
+        "image": "https://placehold.co/400x300?text=Dada+Ayam+Bawang+Bombay",
+        "description": "Et qui vitae sit omnis sunt. A sit qui aperiam voluptatem. Expedita magni omnis et qui. Ipsum nulla qui dicta inventore vel deserunt fuga."
     },
     {
         "id": 12,
-        "category_id": 3,
-        "name": "Nasi Padang",
-        "price": 25000,
-        "stock": 14,
-        "description": "Nasi padang"
+        "name": "Nasi Kuning Kelapa",
+        "price": 98466,
+        "stock": 42,
+        "category_id": 4,
+        "expire_date": "2005-05-30",
+        "image": "https://placehold.co/400x300?text=Nasi+Kuning+Kelapa",
+        "description": "Quis recusandae fugit magni qui mollitia nostrum fugit ex. Doloremque ut accusamus pariatur. Voluptatem vel porro voluptas harum nesciunt."
     },
     {
         "id": 13,
-        "category_id": 4,
-        "name": "Sate Padang",
-        "price": 28000,
-        "stock": 10,
-        "expired_date": "2022-03-15",
-        "description": "Sate padang"
+        "name": "Daging Sapi Tomat",
+        "price": 15719,
+        "stock": 57,
+        "category_id": 3,
+        "expire_date": "2012-04-12",
+        "image": "https://placehold.co/400x300?text=Daging+Sapi+Tomat",
+        "description": "Est culpa sint quia. Fuga veniam ut error. Sed eos pariatur impedit. Iure autem dicta provident voluptate."
     },
     {
         "id": 14,
+        "name": "Opor Ayam Durian",
+        "price": 55989,
+        "stock": 10,
         "category_id": 1,
-        "name": "Mie Goreng",
-        "price": 16000,
-        "stock": 16,
-        "description": "Mie goreng"
+        "expire_date": "2011-06-28",
+        "image": "https://placehold.co/400x300?text=Opor+Ayam+Durian",
+        "description": "Necessitatibus sit sunt itaque nemo voluptatum rerum. Voluptatum doloremque vel qui minima omnis eum in est. Quisquam maxime ipsam libero commodi. Aperiam ad corporis vel aut a."
     },
     {
         "id": 15,
-        "category_id": 2,
-        "name": "Bakso Malang",
-        "price": 22000,
-        "stock": 10,
-        "expired_date": "2022-01-15",
-        "description": "Bakso Malang"
+        "name": "Daging Kambing Brokoli",
+        "price": 50203,
+        "stock": 21,
+        "category_id": 1,
+        "expire_date": "1992-10-08",
+        "image": "https://placehold.co/400x300?text=Daging+Kambing+Brokoli",
+        "description": "Qui distinctio adipisci quos. Repellat assumenda fugiat sed."
     },
     {
         "id": 16,
+        "name": "Onde-Onde Jeruk",
+        "price": 51125,
+        "stock": 11,
         "category_id": 3,
-        "name": "Ayam Bakar",
-        "price": 28000,
-        "stock": 10,
-        "description": "Ayam bakar"
+        "expire_date": "1993-01-30",
+        "image": "https://placehold.co/400x300?text=Onde-Onde+Jeruk",
+        "description": "Et ipsum assumenda ut odit officia. Quia ut qui earum. Consequatur dolores qui quod voluptatem cumque rerum expedita. Ipsum omnis aut doloribus."
     },
     {
         "id": 17,
-        "category_id": 4,
-        "name": "Soto Betawi",
-        "price": 24000,
-        "stock": 8,
-        "expired_date": "2022-02-20",
-        "description": "Soto Betawi"
+        "name": "Dada Ayam Cabai",
+        "price": 13538,
+        "stock": 94,
+        "category_id": 2,
+        "expire_date": "1977-08-31",
+        "image": "https://placehold.co/400x300?text=Dada+Ayam+Cabai",
+        "description": "Labore consequatur error doloribus iste ratione voluptate iusto laboriosam. Eos provident magnam eum qui sint cupiditate. Tempora qui velit aut quasi et. Animi voluptatem maiores doloremque ut."
     },
     {
         "id": 18,
-        "category_id": 1,
-        "name": "Nasi Goreng Special",
-        "price": 22000,
-        "stock": 12,
-        "description": "Nasi goreng special"
+        "name": "Getuk Kiwi",
+        "price": 56562,
+        "stock": 71,
+        "category_id": 4,
+        "expire_date": "1974-09-15",
+        "image": "https://placehold.co/400x300?text=Getuk+Kiwi",
+        "description": "Dolor ipsum sit vero voluptatum. Facilis dolor enim et nostrum eligendi ipsa. Molestiae aut adipisci dolore aut. Autem iure voluptatem laudantium doloremque. Quisquam error facilis laudantium ea."
     },
     {
         "id": 19,
-        "category_id": 2,
-        "name": "Bakmi Goreng",
-        "price": 20000,
-        "stock": 10,
-        "expired_date": "2022-02-10",
-        "description": "Bakmi goreng"
+        "name": "Daging Sapi Timun",
+        "price": 70936,
+        "stock": 5,
+        "category_id": 3,
+        "expire_date": "2000-02-01",
+        "image": "https://placehold.co/400x300?text=Daging+Sapi+Timun",
+        "description": "Debitis nihil quis vero sit nesciunt impedit praesentium. Est quibusdam a beatae fuga nam corporis qui. Qui consequuntur qui esse. Doloribus est ipsam a."
     },
     {
         "id": 20,
-        "category_id": 3,
-        "name": "Ayam Goreng Spesial",
-        "price": 26000,
-        "stock": 10,
-        "description": "Ayam goreng spesial"
+        "name": "Kupat Tahu Ceri",
+        "price": 80461,
+        "stock": 44,
+        "category_id": 4,
+        "expire_date": "2009-08-11",
+        "image": "https://placehold.co/400x300?text=Kupat+Tahu+Ceri",
+        "description": "Placeat ratione sunt ut maxime eum. Accusantium et voluptatem alias laboriosam. Totam debitis eius necessitatibus accusamus."
     },
     {
         "id": 21,
-        "category_id": 4,
-        "name": "Soto Ayam Betawi",
-        "price": 25000,
-        "stock": 9,
-        "expired_date": "2022-03-05",
-        "description": "Soto ayam Betawi"
+        "name": "Sayap Ayam Terong",
+        "price": 53218,
+        "stock": 25,
+        "category_id": 3,
+        "expire_date": "1987-11-02",
+        "image": "https://placehold.co/400x300?text=Sayap+Ayam+Terong",
+        "description": "Rerum sed consequatur dolorem est qui ea et. Ipsa quam beatae voluptatem rerum nulla molestiae quaerat maxime. Maiores inventore cum assumenda quia commodi voluptas."
     },
     {
         "id": 22,
-        "category_id": 1,
-        "name": "Nasi Uduk Betawi",
-        "price": 23000,
-        "stock": 14,
-        "description": "Nasi uduk Betawi"
+        "name": "Nasi Kuning Semangka",
+        "price": 75050,
+        "stock": 73,
+        "category_id": 2,
+        "expire_date": "2008-12-20",
+        "image": "https://placehold.co/400x300?text=Nasi+Kuning+Semangka",
+        "description": "In ut aut consequuntur aut voluptas a. Et et asperiores sint deleniti sed."
     },
     {
         "id": 23,
-        "category_id": 2,
-        "name": "Mie Ayam Special",
-        "price": 19000,
-        "stock": 20,
-        "expired_date": "2022-03-12",
-        "description": "Mie ayam special"
+        "name": "Sayap Ayam Labu",
+        "price": 13232,
+        "stock": 15,
+        "category_id": 4,
+        "expire_date": "2008-02-23",
+        "image": "https://placehold.co/400x300?text=Sayap+Ayam+Labu",
+        "description": "Consequatur et in voluptas voluptatem inventore. Corrupti earum dolores omnis aspernatur et fugit quisquam. Veniam velit non similique cumque et."
     },
     {
         "id": 24,
-        "category_id": 3,
-        "name": "Nasi Padang Special",
-        "price": 27000,
-        "stock": 11,
-        "description": "Nasi padang special"
+        "name": "Sate Ayam Blackberry",
+        "price": 50100,
+        "stock": 29,
+        "category_id": 2,
+        "expire_date": "1979-02-14",
+        "image": "https://placehold.co/400x300?text=Sate+Ayam+Blackberry",
+        "description": "Dolorum repellat esse rem id ipsum error molestiae quas. Enim voluptas velit aliquid."
     },
     {
         "id": 25,
+        "name": "Daging Babi Asap Tomat",
+        "price": 14372,
+        "stock": 92,
+        "category_id": 1,
+        "expire_date": "2022-07-26",
+        "image": "https://placehold.co/400x300?text=Daging+Babi+Asap+Tomat",
+        "description": "Similique sunt sint sed possimus ipsum. Dolore saepe labore et inventore. Quis debitis aut aut possimus. Repellendus rerum incidunt ea ipsa omnis et quidem perspiciatis."
+    },
+    {
+        "id": 26,
+        "name": "Pisang Molen Sawo",
+        "price": 97257,
+        "stock": 65,
+        "category_id": 3,
+        "expire_date": "1997-10-22",
+        "image": "https://placehold.co/400x300?text=Pisang+Molen+Sawo",
+        "description": "Vel pariatur eligendi et et possimus quia illum. A recusandae nisi corrupti. Rerum deserunt illo alias ducimus."
+    },
+    {
+        "id": 27,
+        "name": "Dada Ayam Bawang Putih",
+        "price": 3919,
+        "stock": 83,
+        "category_id": 3,
+        "expire_date": "1998-01-15",
+        "image": "https://placehold.co/400x300?text=Dada+Ayam+Bawang+Putih",
+        "description": "Voluptas nisi nobis itaque et non. Molestiae laudantium aut voluptatibus consequatur rerum non aut veniam. Consequuntur et blanditiis aliquid ea aperiam temporibus. Fuga in incidunt ipsa optio minus."
+    },
+    {
+        "id": 28,
+        "name": "Tahu Bulat Ceri",
+        "price": 82807,
+        "stock": 81,
+        "category_id": 2,
+        "expire_date": "1970-07-13",
+        "image": "https://placehold.co/400x300?text=Tahu+Bulat+Ceri",
+        "description": "Eum unde quae at. Voluptas sit non et assumenda. Eligendi esse aut tempore et quia maiores. Non est dolorem et dolorem tempora commodi."
+    },
+    {
+        "id": 29,
+        "name": "Sosis Bawang Putih",
+        "price": 35433,
+        "stock": 65,
+        "category_id": 3,
+        "expire_date": "2016-11-12",
+        "image": "https://placehold.co/400x300?text=Sosis+Bawang+Putih",
+        "description": "Quis quo aut placeat. Minima impedit maiores asperiores quia consequatur. Quia qui dicta qui et iure atque rerum. Beatae dolorem dolorem aliquam excepturi sint ratione."
+    },
+    {
+        "id": 30,
+        "name": "Pasta Nagka",
+        "price": 95686,
+        "stock": 67,
+        "category_id": 2,
+        "expire_date": "2011-11-20",
+        "image": "https://placehold.co/400x300?text=Pasta+Nagka",
+        "description": "Sunt quia reprehenderit molestias ut sit. Sapiente corporis vitae sint iure magni. Dolorem architecto necessitatibus nam a."
+    },
+    {
+        "id": 31,
+        "name": "Sayap Ayam Jahe",
+        "price": 95373,
+        "stock": 73,
+        "category_id": 1,
+        "expire_date": "2007-04-08",
+        "image": "https://placehold.co/400x300?text=Sayap+Ayam+Jahe",
+        "description": "Deleniti dolorem quas natus mollitia occaecati pariatur amet. Fugiat ut suscipit qui illo dolorum ipsum. Et deleniti consequuntur quia qui in architecto et."
+    },
+    {
+        "id": 32,
+        "name": "Ikan Bakar Durian",
+        "price": 64868,
+        "stock": 74,
+        "category_id": 2,
+        "expire_date": "2023-01-29",
+        "image": "https://placehold.co/400x300?text=Ikan+Bakar+Durian",
+        "description": "Laborum est rem placeat et. Nostrum cum nulla ipsum rerum quidem. Ut fugiat inventore natus. Velit qui excepturi ut exercitationem eius."
+    },
+    {
+        "id": 33,
+        "name": "Ikan Tomat",
+        "price": 10445,
+        "stock": 84,
+        "category_id": 2,
+        "expire_date": "1978-06-13",
+        "image": "https://placehold.co/400x300?text=Ikan+Tomat",
+        "description": "Ut est omnis recusandae ut eveniet nihil ab. Et provident facere sunt culpa. Voluptatem reiciendis libero et dolorem ducimus. Ut exercitationem amet voluptas ut sapiente natus."
+    },
+    {
+        "id": 34,
+        "name": "Pisang Molen Sirsak",
+        "price": 52822,
+        "stock": 39,
+        "category_id": 1,
+        "expire_date": "2007-01-08",
+        "image": "https://placehold.co/400x300?text=Pisang+Molen+Sirsak",
+        "description": "Unde rem ipsum deleniti quia at voluptatum voluptate. Nisi id ipsa rerum voluptates et rerum qui."
+    },
+    {
+        "id": 35,
+        "name": "Daging Ayam Jahe",
+        "price": 24449,
+        "stock": 75,
+        "category_id": 1,
+        "expire_date": "2009-06-17",
+        "image": "https://placehold.co/400x300?text=Daging+Ayam+Jahe",
+        "description": "Eos deleniti earum quam quo iusto. Consequatur quae consequatur et est accusamus. Delectus voluptate necessitatibus similique tempora et suscipit."
+    },
+    {
+        "id": 36,
+        "name": "Ikan Bakar Kelapa",
+        "price": 78844,
+        "stock": 62,
+        "category_id": 3,
+        "expire_date": "1974-04-27",
+        "image": "https://placehold.co/400x300?text=Ikan+Bakar+Kelapa",
+        "description": "Dolores architecto est qui unde reprehenderit harum. Quibusdam velit eos officia veritatis optio maiores. Sint sit hic occaecati ut qui consectetur neque totam. Sint qui aperiam culpa qui."
+    },
+    {
+        "id": 37,
+        "name": "Daging Sapi Bawang Merah",
+        "price": 85003,
+        "stock": 42,
         "category_id": 4,
-        "name": "Sate Padang Spesial",
-        "price": 30000,
+        "expire_date": "2015-12-11",
+        "image": "https://placehold.co/400x300?text=Daging+Sapi+Bawang+Merah",
+        "description": "Et non inventore tempora corrupti. Maiores aperiam et sunt amet et voluptatem architecto dolor."
+    },
+    {
+        "id": 38,
+        "name": "Sayur Asam Nagka",
+        "price": 61227,
+        "stock": 76,
+        "category_id": 3,
+        "expire_date": "2014-01-31",
+        "image": "https://placehold.co/400x300?text=Sayur+Asam+Nagka",
+        "description": "Cupiditate sed ab recusandae voluptatibus illum sequi. Illum assumenda modi qui sed at et reiciendis. Sed vero expedita unde sit quaerat."
+    },
+    {
+        "id": 39,
+        "name": "Daging Babi Asap Jagung",
+        "price": 74228,
+        "stock": 25,
+        "category_id": 3,
+        "expire_date": "2022-07-24",
+        "image": "https://placehold.co/400x300?text=Daging+Babi+Asap+Jagung",
+        "description": "Unde nesciunt autem consequatur eveniet ex aut rerum. Eveniet non consectetur rerum minima labore aut aliquam. Incidunt odit fuga impedit consequatur quaerat."
+    },
+    {
+        "id": 40,
+        "name": "Ketoprak Semangka",
+        "price": 45013,
+        "stock": 44,
+        "category_id": 2,
+        "expire_date": "2000-10-08",
+        "image": "https://placehold.co/400x300?text=Ketoprak+Semangka",
+        "description": "Perferendis ducimus recusandae eligendi deleniti veniam. Quisquam dolor cupiditate omnis quod quod eius non. Laboriosam consequatur aspernatur rerum repudiandae perspiciatis."
+    },
+    {
+        "id": 41,
+        "name": "Daging Babi Acar",
+        "price": 42935,
+        "stock": 56,
+        "category_id": 2,
+        "expire_date": "1985-07-16",
+        "image": "https://placehold.co/400x300?text=Daging+Babi+Acar",
+        "description": "Et vero molestias sint at. Quia non aut libero sed similique ut laborum exercitationem. Nihil voluptas minus veniam totam at. Quaerat dicta doloribus numquam quos."
+    },
+    {
+        "id": 42,
+        "name": "Onde-Onde Blueberry",
+        "price": 66819,
+        "stock": 53,
+        "category_id": 1,
+        "expire_date": "2018-09-25",
+        "image": "https://placehold.co/400x300?text=Onde-Onde+Blueberry",
+        "description": "Dolor aut et maiores ex temporibus dolorem. Facilis explicabo earum ex eum hic. Non excepturi eaque quae pariatur ea corporis."
+    },
+    {
+        "id": 43,
+        "name": "Daging Sapi Bayam",
+        "price": 54364,
+        "stock": 32,
+        "category_id": 3,
+        "expire_date": "1971-01-14",
+        "image": "https://placehold.co/400x300?text=Daging+Sapi+Bayam",
+        "description": "Modi perspiciatis doloribus minima doloremque libero maxime. Corporis atque est laudantium blanditiis sed eos. Qui fugit voluptas fugit velit id cum. Iusto molestias voluptas ut repudiandae."
+    },
+    {
+        "id": 44,
+        "name": "Klontong Nanas",
+        "price": 29917,
+        "stock": 21,
+        "category_id": 4,
+        "expire_date": "1997-10-01",
+        "image": "https://placehold.co/400x300?text=Klontong+Nanas",
+        "description": "Dolores harum non sint aut ea ducimus. Eligendi quod mollitia est sequi beatae est. Ullam eos ipsum in mollitia porro modi praesentium."
+    },
+    {
+        "id": 45,
+        "name": "Hot dog Kentang",
+        "price": 88595,
         "stock": 7,
-        "expired_date": "2022-03-20"
+        "category_id": 1,
+        "expire_date": "2005-04-08",
+        "image": "https://placehold.co/400x300?text=Hot+dog+Kentang",
+        "description": "Perspiciatis ex maxime sunt vel et perspiciatis alias. Et quo maxime sint voluptatum aut quis excepturi. Omnis dolores inventore possimus dolor ut placeat odit."
+    },
+    {
+        "id": 46,
+        "name": "Gado-Gado Blackberry",
+        "price": 64860,
+        "stock": 41,
+        "category_id": 1,
+        "expire_date": "2013-02-21",
+        "image": "https://placehold.co/400x300?text=Gado-Gado+Blackberry",
+        "description": "Dolor beatae quidem ut quam porro sed non. Occaecati consequuntur esse maiores voluptatum. Omnis vel aut aut provident commodi quod sit."
+    },
+    {
+        "id": 47,
+        "name": "Ham Tomat",
+        "price": 48592,
+        "stock": 58,
+        "category_id": 1,
+        "expire_date": "1988-10-28",
+        "image": "https://placehold.co/400x300?text=Ham+Tomat",
+        "description": "Tempore ut in debitis reprehenderit. Tempora repudiandae ipsum maxime ut. Sit expedita sunt iusto voluptates. Omnis iste accusantium eos molestiae fugit dolorem modi."
+    },
+    {
+        "id": 48,
+        "name": "Babi Guling Kelapa",
+        "price": 75164,
+        "stock": 100,
+        "category_id": 2,
+        "expire_date": "2023-05-04",
+        "image": "https://placehold.co/400x300?text=Babi+Guling+Kelapa",
+        "description": "Facilis sint esse et. Nisi non accusantium vitae. Officia atque quas aut asperiores numquam in."
+    },
+    {
+        "id": 49,
+        "name": "Daging Domba Paprika",
+        "price": 35040,
+        "stock": 87,
+        "category_id": 3,
+        "expire_date": "2019-02-13",
+        "image": "https://placehold.co/400x300?text=Daging+Domba+Paprika",
+        "description": "Totam libero ducimus exercitationem quasi praesentium nobis dolor. Et dolorem nam aperiam voluptas expedita et aut. Ratione inventore mollitia et non aut ut aut. Quasi perferendis non iusto et."
+    },
+    {
+        "id": 50,
+        "name": "Rujak Apel",
+        "price": 73475,
+        "stock": 89,
+        "category_id": 2,
+        "expire_date": "1972-06-12",
+        "image": "https://placehold.co/400x300?text=Rujak+Apel",
+        "description": "Aut excepturi qui ipsum repudiandae inventore atque ratione. Atque aut impedit pariatur est. Dicta voluptate velit doloremque officiis. Sapiente dolorem earum repellat tempora et natus laudantium."
+    },
+    {
+        "id": 51,
+        "name": "Sayap Ayam Bawang Bombay",
+        "price": 40578,
+        "stock": 32,
+        "category_id": 1,
+        "expire_date": "1989-08-27",
+        "image": "https://placehold.co/400x300?text=Sayap+Ayam+Bawang+Bombay",
+        "description": "Qui occaecati nostrum adipisci mollitia velit eius labore. Enim qui officia reprehenderit dolor veniam et est. Optio ad dicta hic sed."
+    },
+    {
+        "id": 52,
+        "name": "Nasi Uduk Pir",
+        "price": 95236,
+        "stock": 89,
+        "category_id": 4,
+        "expire_date": "2002-01-17",
+        "image": "https://placehold.co/400x300?text=Nasi+Uduk+Pir",
+        "description": "Possimus eos doloremque nulla nemo vel in enim eum. In maiores id est deleniti eos corporis quisquam nulla. Facilis perferendis ullam consequatur officia dolore sed."
+    },
+    {
+        "id": 53,
+        "name": "Daging Kambing Peterseli",
+        "price": 57598,
+        "stock": 86,
+        "category_id": 3,
+        "expire_date": "1986-12-03",
+        "image": "https://placehold.co/400x300?text=Daging+Kambing+Peterseli",
+        "description": "Soluta sint provident minima nulla. Ipsa ea saepe aut eum. Ut voluptatem aliquid quia velit."
+    },
+    {
+        "id": 54,
+        "name": "Onde-Onde Pepaya",
+        "price": 60570,
+        "stock": 28,
+        "category_id": 4,
+        "expire_date": "1986-11-25",
+        "image": "https://placehold.co/400x300?text=Onde-Onde+Pepaya",
+        "description": "Quaerat quo neque ut neque. Impedit rerum ipsa eum consequatur similique temporibus. Dolorem ipsum sit quisquam libero. Laborum earum sit ut velit."
+    },
+    {
+        "id": 55,
+        "name": "Daging Kerbau Jahe",
+        "price": 84929,
+        "stock": 59,
+        "category_id": 1,
+        "expire_date": "2006-06-17",
+        "image": "https://placehold.co/400x300?text=Daging+Kerbau+Jahe",
+        "description": "Voluptate harum earum explicabo laudantium odio. Aliquam et consequatur omnis aliquam et mollitia. Earum quidem tenetur nulla repudiandae dolor. Sunt dolores fugiat odit."
+    },
+    {
+        "id": 56,
+        "name": "Mie Kocok Melon",
+        "price": 69393,
+        "stock": 66,
+        "category_id": 2,
+        "expire_date": "1993-04-20",
+        "image": "https://placehold.co/400x300?text=Mie+Kocok+Melon",
+        "description": "Ipsam alias quia eos nostrum explicabo non sapiente. Animi beatae tempore et quaerat."
+    },
+    {
+        "id": 57,
+        "name": "Daging Domba Bayam",
+        "price": 2007,
+        "stock": 74,
+        "category_id": 3,
+        "expire_date": "1987-08-26",
+        "image": "https://placehold.co/400x300?text=Daging+Domba+Bayam",
+        "description": "Quas voluptatum nihil hic atque provident et qui. Hic culpa reiciendis numquam. Est doloremque reprehenderit facilis optio. Ut quia ut assumenda deleniti culpa."
+    },
+    {
+        "id": 58,
+        "name": "Seblak Melon",
+        "price": 70184,
+        "stock": 5,
+        "category_id": 2,
+        "expire_date": "2002-08-20",
+        "image": "https://placehold.co/400x300?text=Seblak+Melon",
+        "description": "Consectetur eius placeat autem dolores fuga a. A voluptates et corporis ut ducimus. Et aliquam ab itaque. Est incidunt commodi corporis occaecati ratione delectus consequuntur."
+    },
+    {
+        "id": 59,
+        "name": "Daging Bebek Peterseli",
+        "price": 74275,
+        "stock": 68,
+        "category_id": 4,
+        "expire_date": "1991-10-05",
+        "image": "https://placehold.co/400x300?text=Daging+Bebek+Peterseli",
+        "description": "Possimus ab omnis aperiam labore et. Autem nostrum incidunt officia doloremque. Nam accusamus fugit dolores incidunt. Quis culpa odio aut."
+    },
+    {
+        "id": 60,
+        "name": "Sop Buntut Nagka",
+        "price": 51101,
+        "stock": 49,
+        "category_id": 2,
+        "expire_date": "2018-12-19",
+        "image": "https://placehold.co/400x300?text=Sop+Buntut+Nagka",
+        "description": "Fugit omnis nesciunt eos impedit et. Dignissimos autem veniam expedita. Quisquam laboriosam harum dolorem minus repellat est. Sunt harum sit similique a."
+    },
+    {
+        "id": 61,
+        "name": "Ikan Ubi",
+        "price": 86975,
+        "stock": 80,
+        "category_id": 1,
+        "expire_date": "2020-07-27",
+        "image": "https://placehold.co/400x300?text=Ikan+Ubi",
+        "description": "Aut harum molestiae consequatur officia. A odit reiciendis consequatur rerum vel facilis. Quibusdam id nihil quo non dolor. Autem illum sunt corrupti omnis."
+    },
+    {
+        "id": 62,
+        "name": "Kwetiau Rebus Ceri",
+        "price": 49981,
+        "stock": 43,
+        "category_id": 3,
+        "expire_date": "1993-11-02",
+        "image": "https://placehold.co/400x300?text=Kwetiau+Rebus+Ceri",
+        "description": "Repellendus maxime similique amet iste optio. Qui quia corporis quo earum earum. Veniam esse reprehenderit quam consequatur aut quidem. Soluta omnis velit doloremque. Mollitia doloribus sed enim quo."
+    },
+    {
+        "id": 63,
+        "name": "Daging Sapi Terong",
+        "price": 21933,
+        "stock": 23,
+        "category_id": 3,
+        "expire_date": "1973-02-14",
+        "image": "https://placehold.co/400x300?text=Daging+Sapi+Terong",
+        "description": "Perspiciatis et et inventore similique voluptatum rerum dolor. Quos et neque blanditiis. Tempore consequatur est quod doloremque magni quidem. Dolorem et ut minus animi."
+    },
+    {
+        "id": 64,
+        "name": "Otak-Otak Mangga",
+        "price": 22384,
+        "stock": 24,
+        "category_id": 1,
+        "expire_date": "2016-01-30",
+        "image": "https://placehold.co/400x300?text=Otak-Otak+Mangga",
+        "description": "Dolorem numquam totam et qui et nisi. Accusantium tempore distinctio minima ut neque hic sit. Voluptatem aut beatae officia reiciendis. Molestiae eius sunt repellendus mollitia optio minima tempora."
+    },
+    {
+        "id": 65,
+        "name": "Daging Ayam Labu",
+        "price": 97584,
+        "stock": 32,
+        "category_id": 3,
+        "expire_date": "1985-02-18",
+        "image": "https://placehold.co/400x300?text=Daging+Ayam+Labu",
+        "description": "Nihil sapiente molestias ut occaecati voluptatum soluta. Temporibus quod eligendi nobis sed voluptatem. Enim perspiciatis possimus nihil occaecati. Totam et et sed."
+    },
+    {
+        "id": 66,
+        "name": "Ketoprak Sawo",
+        "price": 65413,
+        "stock": 36,
+        "category_id": 4,
+        "expire_date": "2017-10-02",
+        "image": "https://placehold.co/400x300?text=Ketoprak+Sawo",
+        "description": "Vitae deserunt soluta voluptatum maxime et et sunt. Quae possimus vitae dolorem et aut sunt a. Provident veritatis et repudiandae dolorem et sit."
+    },
+    {
+        "id": 67,
+        "name": "Dada Ayam Cabai",
+        "price": 7505,
+        "stock": 29,
+        "category_id": 1,
+        "expire_date": "2017-12-20",
+        "image": "https://placehold.co/400x300?text=Dada+Ayam+Cabai",
+        "description": "Itaque qui nostrum unde. Est praesentium nulla sed quo consequatur commodi hic. Alias nulla qui alias dolores eos voluptas temporibus. Voluptates blanditiis quas est dolor."
+    },
+    {
+        "id": 68,
+        "name": "Soto Kuning Lemon",
+        "price": 37153,
+        "stock": 53,
+        "category_id": 1,
+        "expire_date": "1978-04-11",
+        "image": "https://placehold.co/400x300?text=Soto+Kuning+Lemon",
+        "description": "Et aut laboriosam eligendi ut dolorum. Impedit distinctio commodi optio eveniet provident. Maxime id doloribus est expedita quasi perspiciatis et."
+    },
+    {
+        "id": 69,
+        "name": "Daging Kerbau Seledri",
+        "price": 92003,
+        "stock": 25,
+        "category_id": 3,
+        "expire_date": "2011-02-20",
+        "image": "https://placehold.co/400x300?text=Daging+Kerbau+Seledri",
+        "description": "Quo sunt est dolorum consequatur quod. Autem quo sed quam veritatis consequuntur iure. Eaque non debitis id est."
+    },
+    {
+        "id": 70,
+        "name": "Ikan Bakar Ceri",
+        "price": 61872,
+        "stock": 18,
+        "category_id": 4,
+        "expire_date": "2008-06-08",
+        "image": "https://placehold.co/400x300?text=Ikan+Bakar+Ceri",
+        "description": "Ut nihil magni numquam blanditiis laborum repudiandae. Voluptatem architecto quo sint vitae minima quod aliquam. Aperiam nostrum eveniet ipsum iste."
+    },
+    {
+        "id": 71,
+        "name": "Sayap Ayam Tomat",
+        "price": 87160,
+        "stock": 33,
+        "category_id": 2,
+        "expire_date": "1972-05-03",
+        "image": "https://placehold.co/400x300?text=Sayap+Ayam+Tomat",
+        "description": "Enim alias ut molestiae iusto earum. Repudiandae sit odit totam. Voluptatem eos nostrum dolore reiciendis."
+    },
+    {
+        "id": 72,
+        "name": "Tahu Bulat Persik",
+        "price": 98924,
+        "stock": 71,
+        "category_id": 2,
+        "expire_date": "1978-09-09",
+        "image": "https://placehold.co/400x300?text=Tahu+Bulat+Persik",
+        "description": "Omnis voluptatibus fugit voluptatem consequuntur error natus aliquam molestias. Praesentium eius quo esse sunt. Id et amet quia eaque."
+    },
+    {
+        "id": 73,
+        "name": "Sayap Ayam Terong",
+        "price": 42073,
+        "stock": 33,
+        "category_id": 3,
+        "expire_date": "2001-10-02",
+        "image": "https://placehold.co/400x300?text=Sayap+Ayam+Terong",
+        "description": "Ea quo sit praesentium. Maiores veniam ut aspernatur aut. Qui delectus sunt aliquid soluta magni voluptatem."
+    },
+    {
+        "id": 74,
+        "name": "Mie Goreng Kiwi",
+        "price": 68640,
+        "stock": 71,
+        "category_id": 3,
+        "expire_date": "2018-10-11",
+        "image": "https://placehold.co/400x300?text=Mie+Goreng+Kiwi",
+        "description": "Sint dolore enim qui inventore. Quia harum a nemo esse et mollitia quis id. Sit hic sit est asperiores laudantium fuga aut. Doloremque aliquam sed ex praesentium qui. Nihil quia eligendi corporis."
+    },
+    {
+        "id": 75,
+        "name": "Ikan Ubi",
+        "price": 8044,
+        "stock": 6,
+        "category_id": 3,
+        "expire_date": "1999-04-16",
+        "image": "https://placehold.co/400x300?text=Ikan+Ubi",
+        "description": "Error id ut dolores tempore iste quidem exercitationem. Dicta fuga ullam quam quis. Omnis vel quidem quis magni et minus. Commodi sit aliquam rem id qui."
+    },
+    {
+        "id": 76,
+        "name": "Sayur Asam Jambu",
+        "price": 67246,
+        "stock": 74,
+        "category_id": 2,
+        "expire_date": "2016-03-15",
+        "image": "https://placehold.co/400x300?text=Sayur+Asam+Jambu",
+        "description": "Sunt velit blanditiis iusto quasi voluptas. Perspiciatis incidunt enim id veniam consequatur sint. Qui eum eos et sapiente veniam qui. Sequi corporis voluptates autem rerum omnis maxime sint."
+    },
+    {
+        "id": 77,
+        "name": "Daging Kerbau Seledri",
+        "price": 37773,
+        "stock": 99,
+        "category_id": 2,
+        "expire_date": "2014-12-06",
+        "image": "https://placehold.co/400x300?text=Daging+Kerbau+Seledri",
+        "description": "Deleniti facere velit eum autem modi cupiditate enim. Ipsam aut mollitia velit ab autem aut. Quos iure quis molestias. Nulla alias aspernatur quos dolores esse distinctio sit."
+    },
+    {
+        "id": 78,
+        "name": "Mie Goreng Semangka",
+        "price": 78904,
+        "stock": 67,
+        "category_id": 2,
+        "expire_date": "1975-05-21",
+        "image": "https://placehold.co/400x300?text=Mie+Goreng+Semangka",
+        "description": "Non natus dolor ut ipsa. Illum explicabo omnis labore voluptatem qui ut unde. Voluptas omnis dolorem placeat totam expedita omnis corrupti fugit."
+    },
+    {
+        "id": 79,
+        "name": "Daging Kambing Paprika",
+        "price": 87803,
+        "stock": 51,
+        "category_id": 3,
+        "expire_date": "1993-10-05",
+        "image": "https://placehold.co/400x300?text=Daging+Kambing+Paprika",
+        "description": "Sunt beatae soluta provident non adipisci possimus non repudiandae. Sint ut aut ut in saepe. Suscipit molestias harum sit perferendis qui error. Nisi iusto fugiat aut omnis."
+    },
+    {
+        "id": 80,
+        "name": "Kroket Stroberi",
+        "price": 73717,
+        "stock": 44,
+        "category_id": 1,
+        "expire_date": "1983-09-18",
+        "image": "https://placehold.co/400x300?text=Kroket+Stroberi",
+        "description": "Consequatur aperiam hic aut ab voluptas eos dolorem. Voluptatem est repellendus tempora. Beatae vero veritatis earum dicta. Reiciendis error nesciunt quas vitae."
+    },
+    {
+        "id": 81,
+        "name": "Ikan Brokoli",
+        "price": 67435,
+        "stock": 84,
+        "category_id": 1,
+        "expire_date": "1990-10-24",
+        "image": "https://placehold.co/400x300?text=Ikan+Brokoli",
+        "description": "Laudantium id molestias repellendus quos molestias quia. Voluptatibus dolores aut est odit iusto. Esse nisi dolor dolorum id architecto. Soluta ut assumenda tempora voluptas."
+    },
+    {
+        "id": 82,
+        "name": "Nasi Kucing Ceri",
+        "price": 25945,
+        "stock": 37,
+        "category_id": 3,
+        "expire_date": "1974-03-13",
+        "image": "https://placehold.co/400x300?text=Nasi+Kucing+Ceri",
+        "description": "Sint doloribus officia alias quasi atque ullam. Mollitia inventore et pariatur quibusdam voluptatem ducimus. Quisquam explicabo corrupti nihil ducimus laborum. Corporis velit soluta porro quia aut."
+    },
+    {
+        "id": 83,
+        "name": "Hot dog Bayam",
+        "price": 49624,
+        "stock": 14,
+        "category_id": 1,
+        "expire_date": "2005-02-23",
+        "image": "https://placehold.co/400x300?text=Hot+dog+Bayam",
+        "description": "Id non cupiditate quod illo voluptatum aut. Voluptatem alias officia ut rerum. Voluptas perspiciatis maxime dolores laudantium amet et. Reprehenderit aut laborum impedit fugiat optio ab dolorem."
+    },
+    {
+        "id": 84,
+        "name": "Pepes Ikan Kelapa",
+        "price": 13982,
+        "stock": 37,
+        "category_id": 2,
+        "expire_date": "2021-07-23",
+        "image": "https://placehold.co/400x300?text=Pepes+Ikan+Kelapa",
+        "description": "Iure reiciendis commodi et voluptatum dolorum. Facilis deserunt molestias corporis possimus. Tenetur non placeat voluptatem et commodi tenetur officia."
+    },
+    {
+        "id": 85,
+        "name": "Daging Kerbau Terong",
+        "price": 12283,
+        "stock": 26,
+        "category_id": 1,
+        "expire_date": "1991-11-19",
+        "image": "https://placehold.co/400x300?text=Daging+Kerbau+Terong",
+        "description": "Magni error voluptatum mollitia mollitia. Numquam quaerat minima dolor aperiam. Quis corrupti adipisci perferendis tenetur dolor aut eum."
+    },
+    {
+        "id": 86,
+        "name": "Rendang Anggur",
+        "price": 23745,
+        "stock": 99,
+        "category_id": 3,
+        "expire_date": "2000-05-10",
+        "image": "https://placehold.co/400x300?text=Rendang+Anggur",
+        "description": "Laboriosam aut animi maxime amet. Sed facilis consectetur est. Est nulla a eaque magnam aut nostrum nam. Cumque rem fuga deserunt delectus. Consequatur ut tenetur alias praesentium ea."
+    },
+    {
+        "id": 87,
+        "name": "Ham Jahe",
+        "price": 99827,
+        "stock": 3,
+        "category_id": 2,
+        "expire_date": "2008-05-13",
+        "image": "https://placehold.co/400x300?text=Ham+Jahe",
+        "description": "Rerum et ea omnis et occaecati. Quos eveniet eligendi voluptatem et accusamus fuga. Voluptatum et sit iste numquam. Enim eos debitis dolores nihil nobis."
+    },
+    {
+        "id": 88,
+        "name": "Sayur Asam Pisang",
+        "price": 8047,
+        "stock": 96,
+        "category_id": 1,
+        "expire_date": "1971-10-03",
+        "image": "https://placehold.co/400x300?text=Sayur+Asam+Pisang",
+        "description": "Ducimus quisquam consequatur quia possimus molestiae. Nam corrupti rerum id est. Corrupti ea eligendi sit iste aliquam a vero. Repellendus vitae vel voluptatem vel."
+    },
+    {
+        "id": 89,
+        "name": "Hot dog Daun Mint",
+        "price": 43405,
+        "stock": 58,
+        "category_id": 4,
+        "expire_date": "2016-06-06",
+        "image": "https://placehold.co/400x300?text=Hot+dog+Daun+Mint",
+        "description": "Est quis hic labore. Excepturi nihil quia et molestiae. Aut debitis ut porro magnam."
+    },
+    {
+        "id": 90,
+        "name": "Tahu Bulat Sirsak",
+        "price": 62571,
+        "stock": 7,
+        "category_id": 1,
+        "expire_date": "1983-02-11",
+        "image": "https://placehold.co/400x300?text=Tahu+Bulat+Sirsak",
+        "description": "Qui praesentium quo reiciendis repudiandae ut deserunt doloremque. Esse impedit quae laboriosam et suscipit. Saepe qui rerum molestias. Debitis corrupti vel et consequatur aut."
+    },
+    {
+        "id": 91,
+        "name": "Daging Sapi Kentang",
+        "price": 41957,
+        "stock": 77,
+        "category_id": 3,
+        "expire_date": "2019-01-14",
+        "image": "https://placehold.co/400x300?text=Daging+Sapi+Kentang",
+        "description": "Temporibus rem corrupti non numquam. Quo quas ipsam non qui eos nobis eveniet."
+    },
+    {
+        "id": 92,
+        "name": "Ayam Bakar Sawo",
+        "price": 70942,
+        "stock": 83,
+        "category_id": 2,
+        "expire_date": "1985-09-09",
+        "image": "https://placehold.co/400x300?text=Ayam+Bakar+Sawo",
+        "description": "Delectus iste et distinctio quia sint adipisci nobis. Debitis aut consequatur molestias excepturi inventore aliquam. Id reiciendis architecto corrupti quo eveniet suscipit sed."
+    },
+    {
+        "id": 93,
+        "name": "Daging Domba Bayam",
+        "price": 57122,
+        "stock": 43,
+        "category_id": 4,
+        "expire_date": "1972-09-05",
+        "image": "https://placehold.co/400x300?text=Daging+Domba+Bayam",
+        "description": "Quidem eius sunt sint voluptatibus sunt molestiae. Architecto incidunt eum rerum distinctio optio. Qui assumenda pariatur repellat aliquid. Velit autem itaque esse vitae voluptas asperiores et."
+    },
+    {
+        "id": 94,
+        "name": "Sate Kambing Jeruk",
+        "price": 36714,
+        "stock": 56,
+        "category_id": 2,
+        "expire_date": "1981-03-19",
+        "image": "https://placehold.co/400x300?text=Sate+Kambing+Jeruk",
+        "description": "Tempora natus nulla et et. Ad cupiditate quod voluptate dolorem. Doloremque vel id tempore consectetur. Similique sit temporibus ut."
+    },
+    {
+        "id": 95,
+        "name": "Daging Ayam Jagung",
+        "price": 60011,
+        "stock": 4,
+        "category_id": 3,
+        "expire_date": "1996-03-08",
+        "image": "https://placehold.co/400x300?text=Daging+Ayam+Jagung",
+        "description": "Ab rerum enim et commodi quia. Reiciendis sint dolor aut voluptatem. Qui vel libero soluta blanditiis. Repellendus eligendi quia alias reprehenderit a et quia praesentium."
+    },
+    {
+        "id": 96,
+        "name": "Opor Ayam Kelapa",
+        "price": 11652,
+        "stock": 4,
+        "category_id": 2,
+        "expire_date": "2014-05-26",
+        "image": "https://placehold.co/400x300?text=Opor+Ayam+Kelapa",
+        "description": "Adipisci voluptatem rerum amet. Vero ipsum tenetur est aliquam delectus nam. Aut sequi molestiae aut aut aut rem sint. Debitis fuga culpa magnam incidunt."
+    },
+    {
+        "id": 97,
+        "name": "Daging Sapi Jahe",
+        "price": 67963,
+        "stock": 41,
+        "category_id": 4,
+        "expire_date": "1993-05-05",
+        "image": "https://placehold.co/400x300?text=Daging+Sapi+Jahe",
+        "description": "Qui odit molestiae cum ut ut rem. Ea magnam temporibus facilis odit nisi perferendis."
+    },
+    {
+        "id": 98,
+        "name": "Soto Ayam Sawo",
+        "price": 10550,
+        "stock": 98,
+        "category_id": 1,
+        "expire_date": "2015-04-14",
+        "image": "https://placehold.co/400x300?text=Soto+Ayam+Sawo",
+        "description": "Provident velit est ea nemo voluptas qui. Quo molestiae et consequuntur dolor. Est explicabo rerum omnis aut quis mollitia odit. Maxime accusamus similique et."
+    },
+    {
+        "id": 99,
+        "name": "Daging Sapi Peterseli",
+        "price": 36047,
+        "stock": 35,
+        "category_id": 1,
+        "expire_date": "1986-01-30",
+        "image": "https://placehold.co/400x300?text=Daging+Sapi+Peterseli",
+        "description": "Ducimus animi quam beatae. Tempora aspernatur omnis est corrupti omnis nemo repellendus. Minus omnis blanditiis qui vitae."
+    },
+    {
+        "id": 100,
+        "name": "Ayam Goreng Semangka",
+        "price": 29989,
+        "stock": 64,
+        "category_id": 3,
+        "expire_date": "1988-10-28",
+        "image": "https://placehold.co/400x300?text=Ayam+Goreng+Semangka",
+        "description": "Ipsa itaque magni a laboriosam voluptas ut. Ipsum illum porro provident odit et. Dignissimos qui molestias aut consequatur saepe rem dolorem."
     }
 ]

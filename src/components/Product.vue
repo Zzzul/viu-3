@@ -44,7 +44,7 @@ watch(search, () => {
                             <div class="card-body p-2">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <img src="https://placehold.co/400" alt="image"
+                                        <img :src="category.image" alt="image"
                                             style="border-radius: 50%; width: 30px; object-fit: cover;">
                                     </div>
                                     <div class="col-md-8">
@@ -60,7 +60,7 @@ watch(search, () => {
                             <div class="card-body p-2">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <img src="https://placehold.co/400" alt="image"
+                                        <img src="https://placehold.co/400x300?text=See+all" alt="image"
                                             style="border-radius: 50%; width: 30px; object-fit: cover;">
                                     </div>
                                     <div class="col-md-8">
@@ -78,9 +78,9 @@ watch(search, () => {
 
             <div class="col-md-2" v-for="product in filteredProducts" :key="product.id" @click="cart.addToCart(product)">
                 <div class="card" style="cursor: pointer;">
-                    <img src="https://placehold.co/600x400" class="card-img-top" :alt="product.name">
+                    <img :src="product.image" class="card-img-top" :alt="product.name" lazy>
                     <div class="card-body">
-                        <h5 class="card-title">{{ product.name }}</h5>
+                        <h6 class="card-title">{{ product.name }}</h6>
                         <p class="card-text mb-1">{{ cart.formatCurrency(product.price) }}</p>
                         <!-- <small class="fw-light">Stock: {{ product.stock }}</small> -->
                     </div>
