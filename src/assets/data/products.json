@@ -31,5 +31,183 @@
         "price": 10000,
         "stock": 99,
         "description": "Es Teh"
+    },
+    {
+        "id": 5,
+        "category_id": 1,
+        "name": "Mie Goreng",
+        "price": 15000,
+        "stock": 15,
+        "expired_date": "2022-03-01",
+        "description": "Mie goreng"
+    },
+    {
+        "id": 6,
+        "category_id": 3,
+        "name": "Ayam Goreng",
+        "price": 25000,
+        "stock": 8,
+        "description": "Ayam goreng"
+    },
+    {
+        "id": 7,
+        "category_id": 3,
+        "name": "Nasi Kuning",
+        "price": 18000,
+        "stock": 20,
+        "expired_date": "2022-02-15",
+        "description": "Nasi kuning"
+    },
+    {
+        "id": 8,
+        "category_id": 4,
+        "name": "Soto Ayam",
+        "price": 22000,
+        "stock": 12,
+        "description": "Soto ayam"
+    },
+    {
+        "id": 9,
+        "category_id": 4,
+        "name": "Kerak Telor",
+        "price": 17000,
+        "stock": 5,
+        "expired_date": "2022-02-28",
+        "description": "Kerak telor"
+    },
+    {
+        "id": 10,
+        "category_id": 1,
+        "name": "Nasi Uduk",
+        "price": 19000,
+        "stock": 18,
+        "description": "Nasi uduk"
+    },
+    {
+        "id": 11,
+        "category_id": 2,
+        "name": "Mie Ayam",
+        "price": 18000,
+        "stock": 22,
+        "expired_date": "2022-03-10",
+        "description": "Mie ayam"
+    },
+    {
+        "id": 12,
+        "category_id": 3,
+        "name": "Nasi Padang",
+        "price": 25000,
+        "stock": 14,
+        "description": "Nasi padang"
+    },
+    {
+        "id": 13,
+        "category_id": 4,
+        "name": "Sate Padang",
+        "price": 28000,
+        "stock": 10,
+        "expired_date": "2022-03-15",
+        "description": "Sate padang"
+    },
+    {
+        "id": 14,
+        "category_id": 1,
+        "name": "Mie Goreng",
+        "price": 16000,
+        "stock": 16,
+        "description": "Mie goreng"
+    },
+    {
+        "id": 15,
+        "category_id": 2,
+        "name": "Bakso Malang",
+        "price": 22000,
+        "stock": 10,
+        "expired_date": "2022-01-15",
+        "description": "Bakso Malang"
+    },
+    {
+        "id": 16,
+        "category_id": 3,
+        "name": "Ayam Bakar",
+        "price": 28000,
+        "stock": 10,
+        "description": "Ayam bakar"
+    },
+    {
+        "id": 17,
+        "category_id": 4,
+        "name": "Soto Betawi",
+        "price": 24000,
+        "stock": 8,
+        "expired_date": "2022-02-20",
+        "description": "Soto Betawi"
+    },
+    {
+        "id": 18,
+        "category_id": 1,
+        "name": "Nasi Goreng Special",
+        "price": 22000,
+        "stock": 12,
+        "description": "Nasi goreng special"
+    },
+    {
+        "id": 19,
+        "category_id": 2,
+        "name": "Bakmi Goreng",
+        "price": 20000,
+        "stock": 10,
+        "expired_date": "2022-02-10",
+        "description": "Bakmi goreng"
+    },
+    {
+        "id": 20,
+        "category_id": 3,
+        "name": "Ayam Goreng Spesial",
+        "price": 26000,
+        "stock": 10,
+        "description": "Ayam goreng spesial"
+    },
+    {
+        "id": 21,
+        "category_id": 4,
+        "name": "Soto Ayam Betawi",
+        "price": 25000,
+        "stock": 9,
+        "expired_date": "2022-03-05",
+        "description": "Soto ayam Betawi"
+    },
+    {
+        "id": 22,
+        "category_id": 1,
+        "name": "Nasi Uduk Betawi",
+        "price": 23000,
+        "stock": 14,
+        "description": "Nasi uduk Betawi"
+    },
+    {
+        "id": 23,
+        "category_id": 2,
+        "name": "Mie Ayam Special",
+        "price": 19000,
+        "stock": 20,
+        "expired_date": "2022-03-12",
+        "description": "Mie ayam special"
+    },
+    {
+        "id": 24,
+        "category_id": 3,
+        "name": "Nasi Padang Special",
+        "price": 27000,
+        "stock": 11,
+        "description": "Nasi padang special"
+    },
+    {
+        "id": 25,
+        "category_id": 4,
+        "name": "Sate Padang Spesial",
+        "price": 30000,
+        "stock": 7,
+        "expired_date": "2022-03-20"
     }
 ]

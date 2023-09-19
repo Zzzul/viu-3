@@ -21,13 +21,14 @@ export const useCartStore = defineStore('cart', () => {
         } else {
             carts.value.push({
                 ...product,
+                discount: 0,
                 quantity: 1
             })
         }
     }
 
     const countSubTotal = computed(() => {
-        return carts.value.reduce((acc, item) => acc + item.price * item.quantity, 0)
+        return carts.value.reduce((acc, item) => acc + (item.discount ? item.discount : item.price) * item.quantity, 0)
     })
 
     const clearCart = () => {
@@ -103,7 +104,21 @@ export const useCartStore = defineStore('cart', () => {
         paid.value = countGrandTotal.value
     }
 
+    const removeDiscountItem = (index) => {
+        carts.value[index].discount = 0
+    }
+
     const save = () => {
+        if(carts.value.length == 0){
+            alert('Cart is empty')
+            return
+        }
+
+        if(customer.value == ''){
+            alert('Customer is empty')
+            return
+        }
+
         console.log(
             carts.value,
             discount.value,
@@ -133,6 +148,7 @@ export const useCartStore = defineStore('cart', () => {
         autoPayment,
         isCanSave,
         customer,
+        removeDiscountItem,
         save
     }
 })
