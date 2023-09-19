@@ -6,6 +6,10 @@ export const useCartStore = defineStore('cart', () => {
     const discount = ref(0)
     const paid = ref(0)
     const customer = ref('')
+    const card = ref('')
+    const cardInformation = ref({})
+    const multiPayment = ref([])
+    const holdCart = ref([])
 
     const addToCart = (product) => {
         const index = carts.value.findIndex((item) => item.id === product.id)
@@ -36,6 +40,8 @@ export const useCartStore = defineStore('cart', () => {
         discount.value = 0
         paid.value = 0
         customer.value = ''
+        card.value = ''
+        cardInformation.value = {}
     }
 
     const removeItem = (id) => {
@@ -132,6 +138,45 @@ export const useCartStore = defineStore('cart', () => {
         alert('Order has been saved')
     }
 
+    const addMultiPayment = (data) => {
+        multiPayment.value.push(data)
+    }
+
+    const selectCard = (data) => {
+        if(!data){
+            cardInformation.value = {}
+            card.value = ''
+            return
+        }
+
+        card.value = data
+        autoPayment()
+    }
+
+    const setToHoldCart = () => {
+        holdCart.value.push({
+            cart: carts.value,
+            discount: discount.value,
+            paid: paid.value,
+            customer: customer.value,
+            card: card.value,
+            cardInformation: cardInformation.value
+        })
+
+        clearCart()
+    }
+
+    const applyHoldCart = (index) => {
+        carts.value = holdCart.value[index].cart
+        discount.value = holdCart.value[index].discount
+        paid.value = holdCart.value[index].paid
+        customer.value = holdCart.value[index].customer
+        card.value = holdCart.value[index].card
+        cardInformation.value = holdCart.value[index].cardInformation
+
+        holdCart.value.splice(index, 1)
+    }
+
     return {
         carts,
         addToCart,
@@ -149,6 +194,14 @@ export const useCartStore = defineStore('cart', () => {
         isCanSave,
         customer,
         removeDiscountItem,
-        save
+        save,
+        card,
+        multiPayment,
+        addMultiPayment,
+        selectCard,
+        cardInformation,
+        holdCart,
+        setToHoldCart,
+        applyHoldCart
     }
 })

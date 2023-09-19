@@ -9,6 +9,12 @@ const currencyFormat = {
     prefix: 'Rp. ',
     precision: 0,
 }
+const formatQty = {
+    decimal: ',',
+    separator: '.',
+    prefix: '',
+    precision: 0,
+}
 </script>
 
 <template>
@@ -42,8 +48,8 @@ const currencyFormat = {
                         <div class="input-group input-group-sm my-3">
                             <button class="btn btn-outline-secondary" type="button"
                                 @click="cart.decrementQuantity(c.id)">-</button>
-                            <input type="number" class="form-control" v-model="c.quantity"
-                                aria-label="Dollar amount (with dot and two decimal places)">
+                            <vue-number class="form-control" v-model="c.quantity" v-bind="formatQty"
+                                aria-label="Quantity" :max="c.stock" :min="1"></vue-number>
                             <button class="btn btn-outline-secondary" type="button"
                                 @click="cart.incrementQuantity(c.id)">+</button>
                         </div>

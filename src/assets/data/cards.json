@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "BCA"
+    },
+    {
+        "id": 2,
+        "name": "Mandiri"
+    },
+    {
+        "id": 3,
+        "name": "BNI"
+    },
+    {
+        "id": 4,
+        "name": "BRI"
+    },
+    {
+        "id": 5,
+        "name": "Bank Jago"
+    },
+    {
+        "id": 6,
+        "name": "Gopay"
+    },
+    {
+        "id": 7,
+        "name": "Dana"
+    },
+    {
+        "id": 8,
+        "name": "Pinjem dulu seratus"
+    }
+]
