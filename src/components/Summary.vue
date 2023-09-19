@@ -43,7 +43,9 @@ const currencyFormat = {
                                 <vue-number v-bind="currencyFormat" v-model="cart.paid" class="form-control"></vue-number>
                             </div>
                             <div class="col-md-2">
-                                <button class="btn btn-sm btn-primary ms-2 mt-1 p-1" @click="cart.autoPayment">Auto</button>
+                                <button class="btn btn-sm btn-primary ms-3 mt-1" @click="cart.autoPayment">
+                                    <i class="bi bi-arrow-clockwise"></i>
+                                </button>
                             </div>
                         </div>
                     </td>

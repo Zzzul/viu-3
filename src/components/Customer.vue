@@ -25,7 +25,7 @@ const addCustomer = () => {
 <template>
     <div>
         <label for="customer" class="form-label mt-3 float-start fw-bold">Customer</label>
-        <a class="fw-light text-primary float-end mt-3 text-decoration-none" data-bs-toggle="modal"
+        <a href="#" class="fw-light text-primary float-end mt-3 text-decoration-none" data-bs-toggle="modal"
             data-bs-target="#addCustomer">Add customer</a>
 
         <input class="form-control" list="customerOptions" id="exampleDataList" placeholder="Type to search..."
@@ -37,7 +37,7 @@ const addCustomer = () => {
         <!-- Modal -->
         <div class="modal fade" id="addCustomer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="addCustomerLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <form action="#" @submit.prevent="addCustomer">
                         <div class="modal-header">

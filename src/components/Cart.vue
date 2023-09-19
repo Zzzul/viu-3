@@ -29,7 +29,9 @@ const formatQty = {
                 <div class="row">
                     <div class="col-md-8">
                         <p class="mb-0">{{ c.name }}
-                            <button class="btn btn-sm btn-transparent p-0 mb-1 text-danger" @click="cart.removeItem(c.id)">x</button>
+                            <button class="btn btn-sm btn-transparent pt-1 pb-0 ps-0 mb-1 text-danger" @click="cart.removeItem(c.id)">
+                            <i class="bi bi-x-circle"></i>
+                            </button>
                         </p>
 
                         <p class="mb-0 mt-0">
