@@ -9,7 +9,7 @@ export const useCartStore = defineStore('cart', () => {
     const card = ref('')
     const cardInformation = ref({})
     const multiPayment = ref([])
-    const holdCart = ref([])
+    const holdCarts = ref([])
 
     const addToCart = (product) => {
         const index = carts.value.findIndex((item) => item.id === product.id)
@@ -32,7 +32,7 @@ export const useCartStore = defineStore('cart', () => {
     }
 
     const countSubTotal = computed(() => {
-        return carts.value.reduce((acc, item) => acc + (item.discount ? item.discount : item.price) * item.quantity, 0)
+        return parseInt(carts.value.reduce((acc, item) => acc + (item.discount ? item.discount : item.price) * item.quantity, 0))
     })
 
     const clearCart = () => {
@@ -79,7 +79,7 @@ export const useCartStore = defineStore('cart', () => {
     }
 
     const countGrandTotal = computed(() => {
-        return countSubTotal.value - discount.value
+        return  parseInt(countSubTotal.value - discount.value)
     })
 
     const countChange = computed(() => {
@@ -87,7 +87,7 @@ export const useCartStore = defineStore('cart', () => {
             return 0
         }
 
-        return paid.value - countGrandTotal.value
+        return parseInt(paid.value - countGrandTotal.value)
     })
 
     const isCanSave = computed(() => {
@@ -153,9 +153,14 @@ export const useCartStore = defineStore('cart', () => {
         autoPayment()
     }
 
-    const setToHoldCart = () => {
-        holdCart.value.push({
-            cart: carts.value,
+    const addToHoldCart = () => {
+        if(carts.value.length == 0){
+            alert('Cart is empty')
+            return
+        }
+
+        holdCarts.value.push({
+            carts: carts.value,
             discount: discount.value,
             paid: paid.value,
             customer: customer.value,
@@ -166,15 +171,19 @@ export const useCartStore = defineStore('cart', () => {
         clearCart()
     }
 
-    const applyHoldCart = (index) => {
-        carts.value = holdCart.value[index].cart
-        discount.value = holdCart.value[index].discount
-        paid.value = holdCart.value[index].paid
-        customer.value = holdCart.value[index].customer
-        card.value = holdCart.value[index].card
-        cardInformation.value = holdCart.value[index].cardInformation
+    const selectHoldCart = (index) => {
+        carts.value = holdCarts.value[index].carts
+        discount.value = holdCarts.value[index].discount
+        paid.value = holdCarts.value[index].paid
+        customer.value = holdCarts.value[index].customer
+        card.value = holdCarts.value[index].card
+        cardInformation.value = holdCarts.value[index].cardInformation
 
-        holdCart.value.splice(index, 1)
+        holdCarts.value.splice(index, 1)
+    }
+
+    const removeHoldCart = (index) => {
+        holdCarts.value.splice(index, 1)
     }
 
     return {
@@ -200,8 +209,9 @@ export const useCartStore = defineStore('cart', () => {
         addMultiPayment,
         selectCard,
         cardInformation,
-        holdCart,
-        setToHoldCart,
-        applyHoldCart
+        holdCarts,
+        addToHoldCart,
+        selectHoldCart,
+        removeHoldCart
     }
 })
