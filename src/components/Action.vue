@@ -3,6 +3,7 @@ import { useCartStore } from '../stores/cart'
 import cards from '../assets/data/cards.json'
 import { Modal } from 'bootstrap'
 import { ref } from 'vue'
+import emptyHoldCart from '../../public/location-search.svg'
 
 const cart = useCartStore()
 const getHoldCartModalRef = ref(null)
@@ -15,6 +16,10 @@ const removeHoldCart = (index) => {
 const selectHoldCart = (index) => {
     cart.selectHoldCart(index)
     closeModalHoldCart()
+}
+
+const autoFillCardInfoName = () => {
+    cart.cardInformation.name = cart.customer
 }
 
 const closeModalHoldCart = () => Modal.getInstance(getHoldCartModalRef.value)?.hide()
@@ -71,19 +76,20 @@ const closeModalHoldCart = () => Modal.getInstance(getHoldCartModalRef.value)?.h
                         <template v-if="cart.card != ''">
                             <hr>
                             <h6>Card Information</h6>
-                            <label for="name" class="mt-1">Name</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Name"
-                                v-model="cart.cardInformation.name">
+                            <label for="name">Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Name"
+                                    aria-label="Name" aria-describedby="basic-addon2" v-model="cart.cardInformation.name">
+                                <span class="input-group-text" id="basic-addon2" style="cursor: pointer;" @click="autoFillCardInfoName">
+                                    <i class="bi bi-arrow-clockwise"></i>
+                                </span>
+                            </div>
 
                             <label for="number" class="mt-2">Number</label>
                             <input type="number" class="form-control" id="number" aria-describedby="number"
                                 placeholder="Number" v-model="cart.cardInformation.number">
                         </template>
                     </div>
-                    <!-- <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save</button>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -132,8 +138,9 @@ const closeModalHoldCart = () => Modal.getInstance(getHoldCartModalRef.value)?.h
                                     </template>
                                     <template v-else>
                                         <tr>
-                                            <td colspan="6">
-                                                <p class="text-center text-danger mb-0">Empty Hold Cart</p>
+                                            <td colspan="6" class="text-center">
+                                                <img :src="emptyHoldCart" alt="Empty hold cart" class="img-fluid" width="150">
+                                                <p class="text-center text-danger mt-3 mb-0">Empty Hold Cart</p>
                                             </td>
                                         </tr>
                                     </template>

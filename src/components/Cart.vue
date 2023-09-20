@@ -1,6 +1,8 @@
 <script setup>
 import { useCartStore } from '../stores/cart'
 import { component as VueNumber } from '@coders-tm/vue-number-format'
+import emptyCart from '../../public/empty-cart.svg'
+
 
 const cart = useCartStore()
 const currencyFormat = {
@@ -24,7 +26,7 @@ const formatQty = {
             <p class="mt-4 text-danger fw-light" @click="cart.clearCart" style="cursor: pointer;">Clear</p>
         </div>
 
-        <div v-if="cart.carts.length > 0" style="max-height: 760px; overflow-y: scroll; overflow-x: hidden;">
+        <div v-if="cart.carts.length > 0" style="max-height: 790px; overflow-y: scroll; overflow-x: hidden;">
             <div class="alert alert-light p-2" role="alert" v-for="(c, i) in cart.carts" :key="c.id">
                 <div class="row">
                     <div class="col-md-8">
@@ -76,8 +78,11 @@ const formatQty = {
             </div>
         </div>
         <template v-else>
-            <div class="alert alert-danger p-2">
-                <p class="mb-0 text-center">Cart is empty</p>
+            <div class="card">
+                <div class="card-body text-center">
+                    <img :src="emptyCart" alt="empty cart" class="img-fluid" width="150">
+                    <p class="mb-0 mt-3 text-danger">Cart is empty</p>
+                </div>
             </div>
         </template>
     </div>

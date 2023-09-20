@@ -13,7 +13,29 @@ const currencyFormat = {
 
 <template>
     <div>
-        <p class="fw-bold">Summary</p>
+        <p class="fw-bold fs-6">Summary</p>
+
+        <div class="card mb-3" v-if="cart.card">
+            <div class="card-body pb-0">
+                <h6 class="card-title">Card Information</h6>
+                <div class="table-responsive">
+                    <table class="table table-striped table-dark">
+                        <tr>
+                            <th>Card</th>
+                            <td>{{ cart.card }}</td>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <td>{{ cart.cardInformation?.name ?? '-' }}</td>
+                        </tr>
+                        <tr>
+                            <th>Number</th>
+                            <td>{{ cart.cardInformation?.number ?? '-' }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
 
         <div class="table-responsive">
             <table class="table table-dark">
@@ -59,28 +81,6 @@ const currencyFormat = {
                     </td>
                 </tr>
             </table>
-        </div>
-
-        <div class="card mb-3" v-if="cart.card">
-            <div class="card-body">
-                <h5 class="card-title">Card Information</h5>
-                <div class="table-responsive">
-                    <table class="table table-striped table-dark">
-                        <tr>
-                            <th>Card</th>
-                            <td>{{ cart.card }}</td>
-                        </tr>
-                        <tr>
-                            <th>Name</th>
-                            <td>{{ cart.cardInformation?.name ?? '-' }}</td>
-                        </tr>
-                        <tr>
-                            <th>Number</th>
-                            <td>{{ cart.cardInformation?.number ?? '-' }}</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
         </div>
     </div>
 </template>
