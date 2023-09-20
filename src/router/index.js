@@ -9,7 +9,9 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       meta: {
-        title: 'Home'
+        title: 'Home',
+        requiresAuth: false,
+        description: 'Home page'
       }
     },
     {
@@ -20,7 +22,9 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
       meta: {
-        title: 'About'
+        title: 'About',
+        requiresAuth: false,
+        description: 'About page'
       }
     }
   ],
