@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import authMiddleware from './middleware/auth-middleware'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -26,6 +27,16 @@ const router = createRouter({
         requiresAuth: false,
         description: 'About page'
       }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/LoginView.vue'),
+      meta: {
+        title: 'Login',
+        requiresAuth: false,
+        description: 'Login page'
+      }
     }
   ],
   scrollBehavior(to, from, savedPosition) {
@@ -37,15 +48,6 @@ const router = createRouter({
   },
 })
 
-router.beforeEach((to) => {
-  const titleFromParams = to.params?.pageTitle
-
-  if (titleFromParams) {
-    document.title = `${titleFromParams} - ${document.title}`
-  } else {
-    document.title = to.meta?.title ?? 'Home'
-  }
-})
-
+router.beforeEach(authMiddleware)
 
 export default router

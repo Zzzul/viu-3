@@ -1,14 +1,19 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { useApi } from '../utils/api'
-import { useAxios } from '../utils/axios'
-
-const api = useApi()
+import { useFetch } from '../utils/fetch'
+import { useRedirectStore } from "@/stores/redirect"
+import { useRouter } from 'vue-router'
 
 export const useAuthStore = defineStore('auth', () => {
+    const api = useApi()
+    const redirectStore = useRedirectStore()
+    const router = useRouter()
+
     const token = ref(null)
     const user = ref(null)
-    const message = ref(null)
+    const authInfo = ref(null)
+    const isLoggedIn = ref(false)
 
     const setToken = (newToken) => token.value = newToken
     const setUser = (newUser) => user.value = newUser
@@ -16,10 +21,25 @@ export const useAuthStore = defineStore('auth', () => {
     const removeUser = () => user.value = null
     const getToken = () => token.value
     const getUser = () => user.value
-    const setMsg = (newMessage) => message.value = newMessage
-    const getMsg = () => message.value
-    const clearMsg = () => message.value = null
+    const setAuthInfo = (payload) => authInfo.value = payload
+    const getAuthInfo = () => authInfo.value
+    const clearAuthInfo = () => authInfo.value = null
+    const setStatusLogin = (payload) => isLoggedIn.value = payload
 
+    /**
+    * Generates a header object with an Authorization token.
+    *
+    * @return {object} The header object with the Authorization token.
+    */
+    const setHeaderToken = () => {
+        return { headers: { Authorization: 'Bearer ' + getToken() } }
+    }
+
+    /**
+     * Clears the state by removing the token and user.
+     * 
+     * @return {void}
+     */
     const clearState = () => {
         removeToken()
         removeUser()
@@ -33,36 +53,56 @@ export const useAuthStore = defineStore('auth', () => {
      * @return {void} void
      */
     const login = async (username, password) => {
+        clearAuthInfo()
+
         await api.post('auth/login', { username, password })
             .then(res => {
-                clearMsg()
                 setToken(res.data.access_token)
-                setMsg({
+                setAuthInfo({
                     success: true,
                     message: 'Berhasil login'
                 })
                 getProfile()
+                setStatusLogin(true)
+                if (redirectStore.getRedirectTo) {
+                    console.log(redirectStore.getRedirectTo())
+                    // useRedirectStore().setRedirectTo(null)
+                    const toNameRoute = redirectStore.getRedirectTo().name
+                    redirectStore.setRedirectTo(null)
+                    router.push({
+                        name: toNameRoute
+                    })
+                }
             })
             .catch(({ response }) => {
                 // handle error
-                console.log(response.data)
-                // alert(response.data.message)
-                setMsg(response.data)
+                console.log(response)
+                // alert(response.message)
+                setAuthInfo(response)
+                setStatusLogin(false)
             })
     }
 
     const cobaLogin = async () => {
-        await useAxios('POST', '/auth/login', {
-            username: 'admin',
-            password: 'admin'
+        await useFetch({
+            method: 'post',
+            url: '/auth/login',
+            data: {
+                username: 'admin',
+                password: 'admin'
+            }
+        }).then(res => {
+            console.log(res)
         })
-            .then(res => {
-                console.log(res)
-            })
     }
 
+    /**
+     * Retrieves the user profile from the server.
+     *
+     * @return {Promise<void>} A promise that resolves when the user profile is successfully retrieved.
+     */
     const getProfile = async () => {
-        await api.get('auth/me', { headers: { Authorization: 'Bearer ' + getToken() } })
+        await api.get('auth/me', setHeaderToken())
             .then(res => {
                 setUser(res.data)
             })
@@ -72,21 +112,26 @@ export const useAuthStore = defineStore('auth', () => {
 
     }
 
+    /**
+     * Logs out the user.
+     * 
+     * @return {Promise<void>} - A promise that resolves when the user is logged out.
+     */
     const logout = async () => {
         if (!getToken()) {
             alert('Empty token')
         }
 
-        await api.post('auth/logout', '', { headers: { Authorization: 'Bearer ' + getToken() } })
+        await api.post('auth/logout', '', setHeaderToken())
             .then(() => {
                 clearState()
-                setMsg({
-                    success: true,
-                    message: 'Berhasil logout'
+                setAuthInfo(null)
+                setStatusLogin(false)
+                router.push({
+                    name: 'login'
                 })
             })
     }
-
 
     return {
         token,
@@ -103,9 +148,12 @@ export const useAuthStore = defineStore('auth', () => {
         getProfile,
         cobaLogin,
         logout,
-        message,
-        setMsg,
-        getMsg,
-        clearMsg
+        authInfo,
+        setAuthInfo,
+        getAuthInfo,
+        clearAuthInfo,
+        setHeaderToken,
+        isLoggedIn,
+        setStatusLogin,
     }
-})
+}, { persist: true })

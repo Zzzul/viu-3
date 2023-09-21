@@ -14,7 +14,9 @@ const authStore = useAuthStore()
     <br>
     <button @click="authStore.logout" v-if="authStore.getToken()">logout</button>
 
-    <p>Message: <span :class="{'text-danger': authStore.getMsg()?.success == false}">{{ authStore.getMsg()?.message }}</span></p>
+    <p>Message: <span :class="{'text-danger': authStore.getAuthInfo()?.success == false}">{{ authStore.getAuthInfo()?.message }}</span></p>
+
+    <p>Status login: {{ authStore.isLoggedIn }}</p>
 
     <p>User</p>
 

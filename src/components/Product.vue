@@ -4,7 +4,7 @@ import categories from '../assets/data/categories.json'
 import emptyProduct from '../../public/empty-product.svg'
 import { onMounted, ref, watch } from 'vue'
 import { useCartStore } from '../stores/cart'
-import { useFilterProductStore } from '../stores/filter_product'
+import { useFilterProductStore } from '../stores/filter-product'
 
 const cart = useCartStore()
 const filterProductStore = useFilterProductStore()
