@@ -27,13 +27,18 @@ const form = ref({
                     <div class="mb-3">
                         <label for="exampleInputusername1" class="form-label">Username</label>
                         <input v-model="form.username" type="text" class="form-control" id="exampleInputusername1"
-                            aria-describedby="usernameHelp" placeholder="Enter username">
+                            aria-describedby="usernameHelp" placeholder="Enter username"
+                            :class="{ 'is-invalid': authStore.getAuthInfo()?.errors?.username }"/>
                         <div id="usernameHelp" class="form-text">We'll never share your username with anyone else.</div>
+                        <small v-if="authStore.getAuthInfo()?.errors" class="text-danger">{{
+                            authStore.getAuthInfo().errors.username[0] }}</small>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input v-model="form.password" type="password" class="form-control" id="exampleInputPassword1"
-                            placeholder="Password">
+                            placeholder="Password" :class="{ 'is-invalid': authStore.getAuthInfo()?.errors?.username }"/>
+                            <small v-if="authStore.getAuthInfo()?.errors" class="text-danger">{{
+                            authStore.getAuthInfo().errors.password[0] }}</small>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

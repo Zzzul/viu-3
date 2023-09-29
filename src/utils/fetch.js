@@ -1,4 +1,6 @@
 import axios from 'axios'
+import middleware401 from '../api/middleware401'
+import { useAuthStore } from '../stores/auth'
 
 const baseURL = import.meta.env.VITE_API_BASE_URL
 
@@ -15,6 +17,15 @@ const baseURL = import.meta.env.VITE_API_BASE_URL
  * @return {Promise} - A promise that resolves to the API response.
  */
 export const useFetch = ({ method, url, data, params, token, customHeaders }) => {
+    axios.interceptors.request.use(function (config) {
+        // Do something before request is sent
+        console.log(config);
+    }, function (error) {
+        // Do something with request error
+        // return Promise.reject(error);
+        console.log(error)
+    })
+
     const api = axios.request({
         headers: {
             ...customHeaders,

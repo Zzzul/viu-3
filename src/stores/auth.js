@@ -19,7 +19,7 @@ export const useAuthStore = defineStore('auth', () => {
     const setUser = (newUser) => user.value = newUser
     const removeToken = () => token.value = null
     const removeUser = () => user.value = null
-    const getToken = () => token.value
+    const getToken = () => 'Bearer ' + token.value
     const getUser = () => user.value
     const setAuthInfo = (payload) => authInfo.value = payload
     const getAuthInfo = () => authInfo.value
@@ -32,7 +32,7 @@ export const useAuthStore = defineStore('auth', () => {
     * @return {object} The header object with the Authorization token.
     */
     const setHeaderToken = () => {
-        return { headers: { Authorization: 'Bearer ' + getToken() } }
+        return { headers: { Authorization: getToken() } }
     }
 
     /**
@@ -43,6 +43,8 @@ export const useAuthStore = defineStore('auth', () => {
     const clearState = () => {
         removeToken()
         removeUser()
+        setAuthInfo(null)
+        setStatusLogin(false)
     }
 
     /**
@@ -55,30 +57,31 @@ export const useAuthStore = defineStore('auth', () => {
     const login = async (username, password) => {
         clearAuthInfo()
 
-        await api.post('auth/login', { username, password })
+        await api.post('/auth/login', { username, password })
             .then(res => {
-                setToken(res.data.access_token)
+                setToken(res.data.token)
+                setUser(res.data.user)
                 setAuthInfo({
                     success: true,
                     message: 'Berhasil login'
                 })
-                getProfile()
+                // getProfile()
                 setStatusLogin(true)
-                if (redirectStore.getRedirectTo) {
-                    console.log(redirectStore.getRedirectTo())
-                    // useRedirectStore().setRedirectTo(null)
+
+                if (redirectStore.getRedirectTo && redirectStore.getRedirectTo().name != 'login') {
                     const toNameRoute = redirectStore.getRedirectTo().name
                     redirectStore.setRedirectTo(null)
-                    router.push({
-                        name: toNameRoute
-                    })
+                    setAuthInfo(null)
+                    router.push({ name: toNameRoute })
+                }else{
+                    router.push({ name: 'home' })
                 }
             })
             .catch(({ response }) => {
-                // handle error
-                console.log(response)
-                // alert(response.message)
-                setAuthInfo(response)
+                setAuthInfo({
+                    ...response?.data,
+                    success: false
+                })
                 setStatusLogin(false)
             })
     }
@@ -102,7 +105,7 @@ export const useAuthStore = defineStore('auth', () => {
      * @return {Promise<void>} A promise that resolves when the user profile is successfully retrieved.
      */
     const getProfile = async () => {
-        await api.get('auth/me', setHeaderToken())
+        await api.get('/auth/me', setHeaderToken())
             .then(res => {
                 setUser(res.data)
             })
@@ -122,14 +125,10 @@ export const useAuthStore = defineStore('auth', () => {
             alert('Empty token')
         }
 
-        await api.post('auth/logout', '', setHeaderToken())
+        await api.post('/auth/logout', '', setHeaderToken())
             .then(() => {
                 clearState()
-                setAuthInfo(null)
-                setStatusLogin(false)
-                router.push({
-                    name: 'login'
-                })
+                router.push({ name: 'home' })
             })
     }
 
