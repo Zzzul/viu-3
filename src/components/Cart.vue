@@ -3,7 +3,6 @@ import { useCartStore } from '../stores/cart'
 import { component as VueNumber } from '@coders-tm/vue-number-format'
 import emptyCart from '../../public/empty-cart.svg'
 
-
 const cart = useCartStore()
 const currencyFormat = {
     decimal: ',',
@@ -37,16 +36,17 @@ const formatQty = {
                         </p>
 
                         <p class="mb-0 mt-0">
-                            <s v-if="c.discount">{{ cart.formatCurrency(c.price) }}</s>
+                            <s v-if="c.discount || c.isFree">{{ cart.formatCurrency(c.price) }}</s>
                             <span v-else>{{ cart.formatCurrency(c.price) }}</span>
-                            <span v-if="c.discount" class="ms-2">{{ cart.formatCurrency(c.discount) }}</span>
+                            <span v-if="c.discount && c.discount > 0" class="ms-2 fw-bold">{{ cart.formatCurrency(c.discount) }}</span>
+                            <span v-if="c.isFree && !c.discount" class="fw-bold ms-2">Free</span>
                         </p>
 
                         <a class="fw-light mt-0 text-primary text-decoration-none"
-                            style="font-size: 11px; cursor: pointer;" data-bs-toggle="modal" :data-bs-target="'#staticBackdrop' + c.id" v-if="!c.discount">Add dicsount</a>
+                            style="font-size: 11px; cursor: pointer;" data-bs-toggle="modal" :data-bs-target="'#staticBackdrop' + c.id" v-if="!c.discount && !c.isFree">Add dicsount</a>
 
                             <a class="fw-light mt-0 text-danger text-decoration-none"
-                            style="font-size: 11px; cursor: pointer;"  v-if="c.discount" @click="cart.removeDiscountItem(i)">Remove dicsount</a>
+                            style="font-size: 11px; cursor: pointer;"  v-if="c.discount || c.isFree" @click="cart.removeDiscountItem(i)">Remove dicsount</a>
                     </div>
                     <div class="col-md-4">
                         <div class="input-group input-group-sm my-3">
@@ -69,8 +69,11 @@ const formatQty = {
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <label :for="'discount' + c.id">Discount</label>
-                                <vue-number class="form-control" v-model="c.discount" :id="'discount' + c.id" v-bind="currencyFormat" :max="c.price" :min="0"></vue-number>
+                                <label :for="'discount' + c.id" class="d-flex justify-content-between">
+                                    <span>Discount </span>
+                                    <span class="fw-light text-primary" style="cursor: pointer;" @click="cart.setToFree(i)">Set to free(0)</span>
+                                </label>
+                                <vue-number class="form-control" v-model="c.discount" :id="'discount' + c.id" v-bind="currencyFormat" :max="c.price" :min="0" :disabled="c.isFree"></vue-number>
                             </div>
                         </div>
                     </div>

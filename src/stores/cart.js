@@ -22,13 +22,21 @@ export const useCartStore = defineStore('cart', () => {
             return 0
         }
 
+        if (countGrandTotal.value == 0) {
+            return 0
+        }
+
+        if (discount.value >= countGrandTotal.value) {
+            return 0
+        }
+
         return parseInt(paid.value - countGrandTotal.value)
     })
 
     const isCanSave = computed(() => {
-        if (countGrandTotal.value == 0) {
-            return false
-        }
+        // if (countGrandTotal.value == 0) {
+        //     return false
+        // }
 
         if (carts.value.length == 0) {
             return false
@@ -42,7 +50,7 @@ export const useCartStore = defineStore('cart', () => {
     })
 
     const countSubTotal = computed(() => {
-        return parseInt(carts.value.reduce((acc, item) => acc + (item.discount ? item.discount : item.price) * item.quantity, 0))
+        return parseInt(carts.value.reduce((acc, item) => acc + (item?.isFree ? 0 : (item?.discount ? item.discount : item.price)) * item.quantity, 0))
     })
 
     /**
@@ -64,6 +72,7 @@ export const useCartStore = defineStore('cart', () => {
         } else {
             carts.value.push({
                 ...product,
+                isFree: false,
                 discount: 0,
                 quantity: 1
             })
@@ -155,6 +164,7 @@ export const useCartStore = defineStore('cart', () => {
      */
     const removeDiscountItem = (index) => {
         carts.value[index].discount = 0
+        carts.value[index].isFree = false
     }
 
     /**
@@ -254,6 +264,11 @@ export const useCartStore = defineStore('cart', () => {
         holdCarts.value.splice(index, 1)
     }
 
+    const setToFree = (index) => {
+        carts.value[index].discount = 0
+        carts.value[index].isFree = !carts.value[index].isFree
+    }
+
     return {
         carts,
         addToCart,
@@ -280,7 +295,8 @@ export const useCartStore = defineStore('cart', () => {
         holdCarts,
         addToHoldCart,
         selectHoldCart,
-        removeHoldCart
+        removeHoldCart,
+        setToFree
     }
 },
     {
