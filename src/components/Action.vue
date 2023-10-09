@@ -8,16 +8,34 @@ import emptyHoldCart from '../../public/location-search.svg'
 const cart = useCartStore()
 const getHoldCartModalRef = ref(null)
 
+/**
+ * Remove a cart from the hold cart list.
+ *
+ * @param {number} index - The index of the cart to be removed.
+ * @return {void} This function does not return anything.
+ */
 const removeHoldCart = (index) => {
     cart.removeHoldCart(index)
     closeModalHoldCart()
 }
 
+/**
+ * Selects a hold cart at the specified index and closes the modal.
+ *
+ * @param {number} index - The index of the hold cart to select.
+ * @return {void} 
+ */
 const selectHoldCart = (index) => {
     cart.selectHoldCart(index)
     closeModalHoldCart()
 }
 
+/**
+ * Auto-fills the card information name based on the customer name.
+ *
+ * @param {type} paramName - description of parameter
+ * @return {type} description of return value
+ */
 const autoFillCardInfoName = () => {
     cart.cardInformation.name = cart.customer
 }
@@ -40,7 +58,8 @@ const closeModalHoldCart = () => Modal.getInstance(getHoldCartModalRef.value)?.h
             <button class="float-end btn btn-success me-0" :disabled="!cart.isCanSave" @click="cart.save">
                 <i class="bi bi-save-fill"></i> Save
             </button>
-            <button class="float-end btn btn-warning me-2" @click="cart.addToHoldCart"> <i class="bi bi-pin-fill"></i> Hold</button>
+            <button class="float-end btn btn-warning me-2" @click="cart.addToHoldCart"> <i class="bi bi-pin-fill"></i>
+                Hold</button>
         </div>
 
         <!-- Card Payment -->
@@ -78,9 +97,10 @@ const closeModalHoldCart = () => Modal.getInstance(getHoldCartModalRef.value)?.h
                             <h6>Card Information</h6>
                             <label for="name">Name</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Name"
-                                    aria-label="Name" aria-describedby="basic-addon2" v-model="cart.cardInformation.name">
-                                <span class="input-group-text" id="basic-addon2" style="cursor: pointer;" @click="autoFillCardInfoName">
+                                <input type="text" class="form-control" placeholder="Name" aria-label="Name"
+                                    aria-describedby="basic-addon2" v-model="cart.cardInformation.name">
+                                <span class="input-group-text" id="basic-addon2" style="cursor: pointer;"
+                                    @click="autoFillCardInfoName">
                                     <i class="bi bi-arrow-clockwise"></i>
                                 </span>
                             </div>
@@ -125,8 +145,7 @@ const closeModalHoldCart = () => Modal.getInstance(getHoldCartModalRef.value)?.h
                                                 (item.discount ?
                                                     item.discount : item.price) * item.quantity, 0))) }}</td>
                                             <td>
-                                                <button class="btn btn-sm btn-outline-success"
-                                                    @click="selectHoldCart(i)">
+                                                <button class="btn btn-sm btn-outline-success" @click="selectHoldCart(i)">
                                                     <i class="bi bi-hand-index-thumb-fill"></i>
                                                 </button>
                                                 <button class="btn btn-sm btn-outline-danger ms-2"
@@ -139,7 +158,8 @@ const closeModalHoldCart = () => Modal.getInstance(getHoldCartModalRef.value)?.h
                                     <template v-else>
                                         <tr>
                                             <td colspan="6" class="text-center">
-                                                <img :src="emptyHoldCart" alt="Empty hold cart" class="img-fluid" width="150">
+                                                <img :src="emptyHoldCart" alt="Empty hold cart" class="img-fluid"
+                                                    width="150">
                                                 <p class="text-center text-danger mt-3 mb-0">Empty Hold Cart</p>
                                             </td>
                                         </tr>
